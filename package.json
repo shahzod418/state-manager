@@ -1,0 +1,20 @@
+{
+  "name": "davlatov-state-manager",
+  "version": "1.0.0",
+  "description": "State manager task",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "package.json"],
+  "author": "Shahzod Davlatov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "typescript": "^5.0.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2"
+  }
+}
