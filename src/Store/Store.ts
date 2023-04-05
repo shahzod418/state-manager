@@ -2,7 +2,7 @@ import { Action } from "../interfaces/action";
 
 class Store<T = any> {
   private static instance: Store;
-  private subscribers!: Record<string, (state: T) => T>;
+  private subscribers: Record<string, (state: T) => T> = {};
 
   public state: T;
 
