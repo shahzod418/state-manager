@@ -8,4 +8,4 @@ import { Action } from "./interfaces/action";
 const createStore = <T = any>(rootReducer: (state: T, action: Action) => T) =>
   Store.getInstance<T>(rootReducer);
 
-export { StoreProvider, createStore, useDispatch, useSelector };
+export { StoreProvider, createStore, useDispatch, useSelector, Action };
