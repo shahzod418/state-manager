@@ -1,7 +1,4 @@
-type Action = {
-  type: string;
-  payload: any;
-};
+import { Action } from "../interfaces/action";
 
 class Store<T = any> {
   private static instance: Store;
@@ -9,12 +6,14 @@ class Store<T = any> {
 
   public state: T;
 
-  constructor(private readonly rootReducer: (state: T, action?: Action) => T) {
+  constructor(private readonly rootReducer: (state: T, action: Action) => T) {
     // @ts-ignore
     this.state = this.rootReducer(this.state);
   }
 
-  public static getInstance<T = any>(rootReducer: (state: T) => T): Store<T> {
+  public static getInstance<T = any>(
+    rootReducer: (state: T, action: Action) => T
+  ): Store<T> {
     if (!Store.instance) {
       Store.instance = new Store(rootReducer);
     }

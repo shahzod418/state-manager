@@ -1,11 +1,15 @@
 {
   "name": "davlatov-state-manager",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "State manager task",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist", "README.md", "package.json"],
   "author": "Shahzod Davlatov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahzod418/state-manager.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.0.33",
